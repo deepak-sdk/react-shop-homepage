@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { CartCounter } from "./CartCounter";
 
 export const Nav = ({ addToCart }) => {
@@ -8,9 +9,9 @@ export const Nav = ({ addToCart }) => {
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container px-4 px-lg-5">
-          <a className="navbar-brand" href="#!">
+          <Link className="navbar-brand" to="#!">
             Start Bootstrap
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,44 +26,44 @@ export const Nav = ({ addToCart }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#!">
+                <Link className="nav-link active" aria-current="page" to="#!">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#!">
+                <Link className="nav-link" to="#!">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
                   id="navbarDropdown"
-                  href="#"
+                  to="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Shop
-                </a>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="#!">
+                    <Link className="dropdown-item" to="#!">
                       All Products
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#!">
+                    <Link className="dropdown-item" to="#!">
                       Popular Items
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#!">
+                    <Link className="dropdown-item" to="#!">
                       New Arrivals
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>

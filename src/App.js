@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   const [addToCart, setAddToCart] = useState(0);
-  const [disable, setDisable] = useState(false);
+  //   const [disable, setDisable] = useState(false);
 
   const setCart = () => {
     setAddToCart(addToCart + 1);
