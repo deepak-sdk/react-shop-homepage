@@ -12,7 +12,6 @@ function App() {
   const setCart = () => {
     setAddToCart(addToCart + 1);
   };
-
   const disableBtn = (e) => {
     e.target.disabled = setDisable(disable);
   };
