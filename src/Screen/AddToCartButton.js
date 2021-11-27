@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const AddToCartButton = ({ setCart, disableButton }) => {
+export const AddToCartButton = ({ setCart }) => {
+  const [selected, setSelected] = useState(true);
+  const disableBtn = (e) => {
+    e.target.disabled = true;
+  };
   return (
     <>
       {/* <p>{addToCart}</p> */}
       <button
         onClick={(e) => {
+          selected && disableBtn(e);
           setCart();
-          disableButton(e);
         }}
         className="btn btn-outline-dark mt-auto"
         style={{ margin: "4px" }}
