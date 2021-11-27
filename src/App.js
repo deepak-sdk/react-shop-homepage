@@ -7,10 +7,14 @@ import "./App.css";
 
 function App() {
   const [addToCart, setAddToCart] = useState(0);
-  //   const [disable, setDisable] = useState(false);
+  const [disable, setDisable] = useState(true);
 
   const setCart = () => {
     setAddToCart(addToCart + 1);
+  };
+
+  const disableBtn = (e) => {
+    e.target.disabled = setDisable(disable);
   };
 
   const removeCart = () => {
@@ -25,6 +29,7 @@ function App() {
         addToCart={addToCart}
         setCart={setCart}
         removeCart={removeCart}
+        disableButton={disableBtn}
       />
       <Footer />
     </div>

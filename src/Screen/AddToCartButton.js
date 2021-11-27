@@ -1,12 +1,13 @@
 import React from "react";
 
-export const AddToCartButton = ({ setCart }) => {
+export const AddToCartButton = ({ setCart, disableButton }) => {
   return (
     <>
       {/* <p>{addToCart}</p> */}
       <button
-        onClick={() => {
+        onClick={(e) => {
           setCart();
+          disableButton(e);
         }}
         className="btn btn-outline-dark mt-auto"
         style={{ margin: "4px" }}

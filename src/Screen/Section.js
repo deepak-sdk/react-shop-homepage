@@ -3,7 +3,7 @@ import { AddToCartButton } from "./AddToCartButton";
 import { RemoveFromCart } from "./RemoveFromCart";
 import { Link } from "react-router-dom";
 
-export const Section = ({ setCart, removeCart }) => {
+export const Section = ({ setCart, removeCart, disableButton }) => {
   return (
     <>
       {/* <!-- Section--> */}
@@ -83,8 +83,15 @@ export const Section = ({ setCart, removeCart }) => {
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
-                    <AddToCartButton setCart={setCart} />
-                    <RemoveFromCart removeCart={removeCart} />
+                    <AddToCartButton
+                      setCart={setCart}
+                      disableButton={disableButton}
+                    />
+                    <RemoveFromCart
+                      setCart={setCart}
+                      removeCart={removeCart}
+                      disableButton={disableButton}
+                    />
                   </div>
                 </div>
               </div>
