@@ -1,6 +1,4 @@
 import React from "react";
-import { AddToCartButton } from "./AddToCartButton";
-import { RemoveFromCart } from "./RemoveFromCart";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 
