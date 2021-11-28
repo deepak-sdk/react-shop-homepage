@@ -3,14 +3,14 @@ import React, { useState } from "react";
 export const Button = ({ setCart, removeCart }) => {
   //   const [selected, setSelected] = useState(true);
 
-  const disableBtn = (e) => {
-    e.target.disabled = true;
-  };
+  // const disableBtn = (e) => {
+
+  // };
   return (
     <>
       <button
         onClick={(e) => {
-          disableBtn(e);
+          e.target.disabled = true;
           setCart();
         }}
         className="btn btn-outline-dark mt-auto"
@@ -21,7 +21,7 @@ export const Button = ({ setCart, removeCart }) => {
 
       <button
         onClick={(e) => {
-          disableBtn(e);
+          e.target.disabled = true;
           removeCart();
         }}
         className="btn btn-outline-dark mt-auto"
